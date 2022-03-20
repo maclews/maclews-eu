@@ -116,6 +116,9 @@
     "psr/log": {
         "version": "3.0.0"
     },
+    "roave/security-advisories": {
+        "version": "dev-latest"
+    },
     "sensio/framework-extra-bundle": {
         "version": "6.2",
         "recipe": {
@@ -175,6 +178,9 @@
     },
     "symfony/doctrine-messenger": {
         "version": "v6.0.3"
+    },
+    "symfony/dom-crawler": {
+        "version": "v6.0.6"
     },
     "symfony/dotenv": {
         "version": "v6.0.3"

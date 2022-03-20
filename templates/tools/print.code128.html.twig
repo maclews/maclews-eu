@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ pagetitle }}</title>
+    <link href="https://static.maclews.eu/code128/stylesheet.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'OCRB', 'OCR A', monospace;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        small {
+            letter-spacing: 2pt;
+            margin-left: 2pt;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body onload="window.print()">
+<table><tr>{% autoescape false %}{{ datatable }}{% endautoescape %}</tr></table>
+</body>
+</html>

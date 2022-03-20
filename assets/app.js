@@ -6,7 +6,26 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.css';
+import './styles/app.scss';
+import * as bootstrap from 'bootstrap';
 
 // start the Stimulus application
 import './bootstrap';
+
+// import '@popperjs/core/dist/cjs/popper';
+
+let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+});
+
+let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl);
+})
+
+document.querySelectorAll('.toast').forEach(function (toastNode) {
+    let toast = new bootstrap.Toast(toastNode, { autohide: false });
+    toast.show()
+})
+

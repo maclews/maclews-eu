@@ -1,0 +1,42 @@
+$brand-color1: #03001e;
+$brand-color2: #7303c0;
+$brand-color3: #ec38bc;
+$brand-color4: #fdeff9;
+
+$primary: $brand-color2;
+$secondary: #b00bbf;
+$success: #0bbf2f;
+$warning: #bfb932;
+$info: #158bbf;
+$danger: #bf283f;
+
+$enable-gradients: true;
+
+@import "../fonts/congenial/congenial.css";
+@import "../fonts/kaushan_script/kaushan_script.css";
+@import "../fonts/space_mono/space_mono.css";
+
+$font-family-sans-serif: 'Congenial';
+$headings-font-family: 'Kaushan Script';
+$font-family-monospace: 'Space Mono';
+
+$font-weight-bold: 600;
+$headings-font-weight: normal;
+$display-font-weight: 200;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "~bootstrap-icons/font/bootstrap-icons.scss";
+
+/* PURE CSS */
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+.brand-text-gradient {
+  background: linear-gradient(345deg, $brand-color1 0%, $brand-color2 33%, $brand-color3 67%, $brand-color4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}

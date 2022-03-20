@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {# <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"> #}
+{% endblock %}
+
+{% block body_class %}bg-light min-vh-100 d-flex flex-column align-items-end{% endblock %}
+
+{% block body %}
+    <div class="position-sticky top-0 bg-light shadow mb-3 w-100">
+        <header class="container-xxl d-flex flex-wrap justify-content-between align-items-center py-3">
+            <div class="col-md-3 col-6 text-start order-0 ps-md-0 ps-2">
+                <a href="{{ path('app_main_homepage') }}" class="d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none justify-content-start">
+                    <img class="me-2" src="https://static.maclews.eu/favicon.ico" alt="">
+                    <span class="fs-4 brand-text-gradient">maclews.eu</span>
+                </a>
+            </div>
+            <div class="col-md col-12 order-2 order-md-1">
+                <ul class="nav nav-pills align-items-center justify-content-center">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" id="headNavDrop1"
+                                data-bs-toggle="dropdown" aria-expanded="false">Features
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="headNavDrop1">
+                            <li><a href="#" class="dropdown-item">One</a></li>
+                            <li><a href="#" class="dropdown-item">Two</a></li>
+                            <li><a href="#" class="dropdown-item">Three</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-6 text-end mb-3 mb-md-0 order-1 order-md-2 pe-md-0 pe-3">
+                <a href="#" class="btn btn-outline-danger">Pomoc</a>
+            </div>
+        </header>
+    </div>
+    <div class="flex-grow-1">
+        {% block main_content %}{% endblock %}
+    </div>
+    <div class="container-xxl mt-auto">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                <li class="nav-item"><a href="{{ path('app_steam_homepage') }}" class="nav-link px-2 text-muted">Steam</a></li>
+            </ul>
+            <p class="text-center text-muted">© {{ "now"|date("Y") }} maclews.eu</p>
+        </footer>
+    </div>
+{% endblock %}
