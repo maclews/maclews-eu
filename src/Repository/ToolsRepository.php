@@ -34,14 +34,14 @@ class ToolsRepository
         imagefill($image, 0, 0, $white);
         $location = $padding;
         for ($pos = 1, $posMax = strlen($code_string); $pos <= $posMax; $pos++) {
-            $cur_size = $location . $code_string[$pos - 1];
+            $cur_size = $location + (int)$code_string[$pos - 1];
             imagefilledrectangle(
                 $image,
                 $location * $scale,
                 0,
                 $cur_size * $scale,
                 $img_height,
-                ($pos % 2) ? $black : $white
+                (($pos % 2) ? $black : $white)
             );
             $location = $cur_size;
         }
